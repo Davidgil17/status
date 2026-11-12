@@ -17,8 +17,8 @@
     },
     "test-app": {
       "maintenance": true,
-      "from": null,
-      "to": null,
+      "from": "2026-11-17T14:00:00Z",
+      "to": "2026-11-17T18:00:00Z",
       "title": "Test maintenance",
       "message": "This key is always on. It exists so a debug build can exercise the maintenance gate without flipping a real app."
     }
