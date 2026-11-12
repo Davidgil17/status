@@ -51,20 +51,30 @@ are the one place the wording can be changed without shipping an app.
 
 ## Scheduling a planned outage
 
-Fill in the window and push. The page then appears and disappears on its own —
-nothing has to be flipped at 2am, and nothing depends on having a laptop during
-the outage.
+Easiest way is the admin dashboard's **Maintenance** page
+(`dg.tail310927.ts.net/maintenance`, Tailscale only). It takes local times,
+stores UTC, refuses a half or inverted window, and shows what the apps are
+actually being served.
+
+That page runs on the VM, which is usually the machine going down — so it can
+only schedule beforehand. Editing this file directly works just as well:
 
 ```json
 "from": "2026-11-18T02:00:00Z",
 "to":   "2026-11-18T06:00:00Z"
 ```
 
+Either way the page then appears and disappears on its own — nothing has to be
+flipped at 2am, and nothing depends on having a laptop during the outage.
+
 ## If it overruns
 
 Set `"maintenance": true` and push. That ignores the window entirely. Set it
 back to `false` when the server is really up — **leaving it on is the one
 failure mode that keeps a healthy app dark.**
+
+Mid-outage the dashboard is unreachable, so do this from github.com on a phone:
+[edit status.json](https://github.com/Davidgil17/status/edit/main/status.json).
 
 Expect up to 60 seconds for a change to reach clients: Pages serves this with
 `cache-control: max-age=600`, and the clients defeat that by requesting
