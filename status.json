@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "apps": {
+    "creature-app": {
+      "maintenance": false,
+      "from": null,
+      "to": null,
+      "title": "Down for maintenance",
+      "message": "Creature Hatcher is offline while the server it talks to is being worked on. Your steps, coins and creatures are all safe."
+    },
+    "broadway-guesser": {
+      "maintenance": false,
+      "from": null,
+      "to": null,
+      "title": "Down for maintenance",
+      "message": "Broadway Guesser is offline while the server it talks to is being worked on. Your scores and streak are safe."
+    },
+    "test-app": {
+      "maintenance": true,
+      "from": null,
+      "to": null,
+      "title": "Test maintenance",
+      "message": "This key is always on. It exists so a debug build can exercise the maintenance gate without flipping a real app."
+    }
+  }
+}
