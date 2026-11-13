@@ -17,6 +17,7 @@ Served at: **https://davidgil17.github.io/status/status.json**
 | Creature Hatcher iOS | `creature-app` | `creature-app-ios/CreatureApp/Services/ServiceStatus.swift` |
 | Creature Hatcher Android | `creature-app` | `creature-app-android/.../data/StatusClient.kt` |
 | Broadway Guesser | `broadway-guesser` | `broadway-guesser/frontend/status.js` |
+| Reverence (web, iOS, Android, desktop) | `reverence` | `reverence-ccg/client/src/maintenance.ts` |
 
 Both creature clients share one key on purpose: they are served by the same
 backend, so they go down together.

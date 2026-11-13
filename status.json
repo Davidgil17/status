@@ -15,6 +15,13 @@
       "title": "Down for maintenance",
       "message": "Broadway Guesser is offline while the server it talks to is being worked on. Your scores and streak are safe."
     },
+    "reverence": {
+      "maintenance": false,
+      "from": null,
+      "to": null,
+      "title": "Down for maintenance",
+      "message": "Reverence is offline while the server it talks to is being worked on. Your decks, collection and progress are safe."
+    },
     "test-app": {
       "maintenance": true,
       "from": null,
